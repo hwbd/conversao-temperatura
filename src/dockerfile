@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM node
 WORKDIR /app
 
@@ -6,4 +7,14 @@ RUN npm install
 
 COPY . .
 EXPOSE 8080
+=======
+FROM node
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+EXPOSE 8080
+>>>>>>> 1a6b1ac1a47447fe77810ada245b3e5f90a1719e
 CMD ["node", "server.js"]
